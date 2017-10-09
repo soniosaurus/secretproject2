@@ -6,15 +6,16 @@
 		<link href="./main.css" rel="stylesheet" type="text/css">
 	</head>
 	<body> <!--huvudtaggen för allt som ska synas på sidan-->
+		<body background="seigaiha.png">
 		<h1>Help me choose between...</h1> <!--header 1-->
-		<div><!--divs hjälper att gruppera sektioner i strukturen-->
-				<div>
+		<div class="inputSection"><!--divs hjälper att gruppera sektioner i strukturen. Class pekar ut den specifika elementet i fråga, namn i camelcase-->
+				<div class="inputs">
 					<input placeholder="Something"></input> <!--placeholder: text innan fältet fyllts i-->
 				</div>
-				<button>Add</button>
+				<button class="addOption">Add</button>
 		</div>
-		<button>Go!</button>
+		<button>Go!</button> <!--style = sätt att sätta attribut till element, tex färg osv, som användes innan CSS fanns-->
 	<br>
-	<img src="https://media.tenor.com/images/e4a749ef7dc6b9aa2dc3f08ac4eefbd8/tenor.gif" alt="HTML5 Icon" width="128" height="128">
+	<img src="https://media.tenor.com/images/e4a749ef7dc6b9aa2dc3f08ac4eefbd8/tenor.gif" alt="HTML5 Icon" width="200" height="200">
 	</body>
 </html>
