@@ -1,0 +1,44 @@
+body { /*Stylear allt i vår body på en gång eftersom alla element ligger där*/
+	display: flex; /*Property som centrerar innehåll såsom parents (container,wraps) och childs (items)*/
+	flex-direction: column; /*skapar en kolumn för vårt innehåll*/
+	justify-content: center; /*väljer riktning för kolumnen för hur den ska centreras*/
+	align-items: center;
+	margin-top: 150px;
+}
+
+h1 {/*Overriding the properties for h1, only changes what we overrides and keeps default for the rest*/
+
+	font-weight: lighter; /*default is bold*/
+	font-size: 35px;
+	letter-spacing: 1px;
+	margin-bottom: 0px;
+	font-family: "Arial", Roboto, sans-serif;
+	/*change font!*/
+}
+
+.inputSection { /*När man anropar en klass måste man sätta punkt före namnet*/
+	margin: 50px 0px 80px 0px; /*sätter margin för alla kanter, topp. höger, botten, vänster*/
+	width: 400px;
+}
+
+.inputs { 
+	width: inherit; /* divs ska bli lika breda som parent-blocket, inherit hämtar från parent*/
+	display: flex;
+	flex-direction: column;
+}
+
+input { 
+	margin-top: 10px;
+}
+
+.addOption { 
+	margin-top: 10px;
+
+}
+
+button {
+	background-color: #d3d3d3;
+	font-size: 12px;
+	padding: 6px 12px;
+	border-radius: 8px;
+}
