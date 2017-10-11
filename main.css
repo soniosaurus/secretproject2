@@ -8,6 +8,7 @@ body { /*Stylear allt i vår body på en gång eftersom alla element ligger där
 
 .h1 {/*Overriding the properties for h1, only changes what we overrides and keeps default for the rest*/
 
+	color: #A9A9A9;
 	font-weight: lighter; /*default is bold*/
 	font-size: 35px;
 	letter-spacing: 1px;
@@ -18,6 +19,7 @@ body { /*Stylear allt i vår body på en gång eftersom alla element ligger där
 
 .h2 {/*Overriding the properties for h1, only changes what we overrides and keeps default for the rest*/
 
+	color: #A9A9A9;
 	font-weight: lighter; /*default is bold*/
 	font-size: 35px;
 	letter-spacing: 1px;
@@ -47,10 +49,25 @@ input {
 }
 
 button {
-	background-color: #d3d3d3;
-	font-size: 12px;
-	padding: 6px 12px;
-	border-radius: 8px;
+	border-radius: 20px;
+	font-family: Arial;
+	color:#ffffff;
+	font-size: 14px;
+	background: #a9a9a9;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: 1px #a9a9a9;
+	transition:all 0.3s ease;
+	opacity: 0.5;
+}
+
+button:hover {
+	opacity: 1;
+	}
+
+.btn:hover {
+	background: #21b03e;
+	text-decoration: none;
 }
 
 .resultSection { 
@@ -63,4 +80,15 @@ button {
 	margin-bottom: 0px;
 	font-family: "Arial", Roboto, sans-serif;
 
+}
+
+input {
+	background:#ffffff;
+	border: 1px solid #CCCCCC;
+	border-radius: 2rem;
+	outline: none;
+	font-size: 14px;
+	color:#737373;
+	letter-spacing: 1px;
+	text-indent: 2rem;
 }
