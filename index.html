@@ -7,15 +7,32 @@
 	</head>
 	<body> <!--huvudtaggen för allt som ska synas på sidan-->
 		<body background="seigaiha.png">
+
 		<h1>Help me choose between...</h1> <!--header 1-->
-		<div class="inputSection"><!--divs hjälper att gruppera sektioner i strukturen. Class pekar ut den specifika elementet i fråga, namn i camelcase-->
+
+		<div class="inputSection"><!--divs skapar grupperi strukturen. Class pekar ut det specifika elementet-->
 				<div class="inputs">
 					<input placeholder="Something"></input> <!--placeholder: text innan fältet fyllts i-->
 				</div>
 				<button class="addOption">Add</button>
 		</div>
+		<div class="resultSection"></div>
 		<button>Go!</button> <!--style = sätt att sätta attribut till element, tex färg osv, som användes innan CSS fanns-->
 	<br>
+
 	<img src="https://media.tenor.com/images/e4a749ef7dc6b9aa2dc3f08ac4eefbd8/tenor.gif" alt="HTML5 Icon" width="200" height="200">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> <!--gör så vi kan skriva javascript, src=source-->
+	<script>
+		$(function() { //$ = vill köra javascript
+			$('.resultSection').hide() //hämtar element från HTML, lägger till funktionen hide (syns ej i sidan, display =none). ()=kör funktionen.
+
+			var add_option = function() { //variable add_option is a function 
+				$('.inputs').append('<input></input>') //calling input class from html code and adding jQuery function append (adding new input element)
+			}
+
+			$('.addOption').click(add_option) //adding jQuery event to button - when click, run add_option function
+		})
+	</script>
 	</body>
 </html>
