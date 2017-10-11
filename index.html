@@ -8,7 +8,11 @@
 	<body> <!--huvudtaggen för allt som ska synas på sidan-->
 		<body background="seigaiha.png">
 
-		<h1>Help me choose between...</h1> <!--header 1-->
+		<h1 class="h1">Help me choose between...</h1> <!--header 1-->
+
+		<img class=alpackaWinner src="http://cdn.yourepeat.com/media/gif/000/003/640/cc13b654edf1598bbbf292c89b18a3b2.gif" alt="HTML5 Icon" width="400" height="200">
+
+		<h2 class="h2">The winner is....</h2>
 
 		<div class="inputSection"><!--divs skapar grupperi strukturen. Class pekar ut det specifika elementet-->
 				<div class="inputs">
@@ -20,12 +24,14 @@
 		<button class="submit">Go!</button> <!--style = sätt att sätta attribut till element, tex färg osv, som användes innan CSS fanns-->
 	<br>
 
-	<img src="https://media.tenor.com/images/e4a749ef7dc6b9aa2dc3f08ac4eefbd8/tenor.gif" alt="HTML5 Icon" width="200" height="200">
+	<img class=alpackaHelper src="https://media.tenor.com/images/e4a749ef7dc6b9aa2dc3f08ac4eefbd8/tenor.gif" alt="HTML5 Icon" width="200" height="200">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> <!--gör så vi kan skriva javascript, src=source-->
 	<script>
 		$(function() { //$ = vill köra javascript
 			$('.resultSection').hide() //hämtar element från HTML, lägger till funktionen hide (syns ej i sidan, display =none). ()=kör funktionen.
+			$('.h2').hide()
+			$('.alpackaWinner').hide()
 
 			var add_option = function() { //variable add_option is a function 
 				$('.inputs').append('<input></input>') //calling input class from html code and adding jQuery function append (adding new input element)
@@ -39,6 +45,11 @@
 				$('.inputSection').hide() //Hiding the input section
 				$('.resultSection').css('display', 'flex') //Changing display settion for resultSection to flex to show
 
+				$('.h1').hide()
+				$('.h2').css('display', 'flex')
+
+				$('.alpackaHelper').hide()
+				$('.alpackaWinner').css('display', 'flex')
 
 
 				$('input').each(function() { //finding each input in the code using jQuery and adding them to the options array

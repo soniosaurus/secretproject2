@@ -6,7 +6,17 @@ body { /*Stylear allt i vår body på en gång eftersom alla element ligger där
 	margin-top: 150px;
 }
 
-h1 {/*Overriding the properties for h1, only changes what we overrides and keeps default for the rest*/
+.h1 {/*Overriding the properties for h1, only changes what we overrides and keeps default for the rest*/
+
+	font-weight: lighter; /*default is bold*/
+	font-size: 35px;
+	letter-spacing: 1px;
+	margin-bottom: 0px;
+	font-family: "Arial", Roboto, sans-serif;
+	/*change font!*/
+}
+
+.h2 {/*Overriding the properties for h1, only changes what we overrides and keeps default for the rest*/
 
 	font-weight: lighter; /*default is bold*/
 	font-size: 35px;
@@ -41,4 +51,16 @@ button {
 	font-size: 12px;
 	padding: 6px 12px;
 	border-radius: 8px;
+}
+
+.resultSection { 
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35px;
+	letter-spacing: 1px;
+	margin-bottom: 0px;
+	font-family: "Arial", Roboto, sans-serif;
+
 }
