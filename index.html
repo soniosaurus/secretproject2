@@ -17,7 +17,7 @@
 				<button class="addOption">Add</button>
 		</div>
 		<div class="resultSection"></div>
-		<button>Go!</button> <!--style = sätt att sätta attribut till element, tex färg osv, som användes innan CSS fanns-->
+		<button class="submit">Go!</button> <!--style = sätt att sätta attribut till element, tex färg osv, som användes innan CSS fanns-->
 	<br>
 
 	<img src="https://media.tenor.com/images/e4a749ef7dc6b9aa2dc3f08ac4eefbd8/tenor.gif" alt="HTML5 Icon" width="200" height="200">
@@ -32,6 +32,28 @@
 			}
 
 			$('.addOption').click(add_option) //adding jQuery event to button - when click, run add_option function
+
+			var options = [] //creating a variable that is an array
+			var submit = function() {
+
+				$('.inputSection').hide() //Hiding the input section
+				$('.resultSection').css('display', 'flex') //Changing display settion for resultSection to flex to show
+
+
+
+				$('input').each(function() { //finding each input in the code using jQuery and adding them to the options array
+					options.push($(this).val()) //adding value of options to list, få ut värdet av elementet
+
+				})
+
+				var winner = options[Math.floor(Math.random() * options.length)] //variable for the winner in the array, randomized maths object. Math.random gives us a number between 0 and 1, which is multiplied by the length of options array. Math floor returns integer. 
+				$('.resultSection').text(winner) //Logging the winner in resultSection
+
+			}
+
+			$('.submit').click(submit) //connection submit function to go/submit button
+
+			//for loop to find all of the options and add them to the options array
 		})
 	</script>
 	</body>
